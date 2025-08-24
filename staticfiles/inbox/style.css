@@ -1,0 +1,302 @@
+/* Base Styles for Light Theme */
+body {
+    background-color: #f4f7fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sidebar styling for light theme */
+.sidebar {
+    background-color: #1f2937;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    padding-top: 20px;
+    min-height: 100vh;
+    z-index: 9999;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar links for light theme */
+.nav-link {
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main content area styling */
+.main-content {
+    margin-left: 260px; /* Sidebar width */
+    padding: 40px;
+    background-color: #f4f7fb;
+    min-height: 100vh;
+}
+
+/* Card styling for sections */
+.card {
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Card header styling */
+.card-header {
+    background-color: #ffffff;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 16px 20px;
+    font-size: 18px;
+}
+
+/* Card body styling */
+.card-body {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* Email list styling */
+.email-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Email item styling */
+.email-item {
+    border-bottom: 1px solid #eee;
+    padding: 16px 20px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+/* Styling for unread email items */
+.email-item.unread {
+    background-color: #e8f4ff;
+}
+
+/* Button styling */
+.btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+/* Button color adjustments for light theme */
+.btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Textarea and form input styling */
+.form-control {
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+/* Focused textarea style */
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Loading and spinner styles */
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #2563eb;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments for mobile and small screens */
+@media (max-width: 768px) {
+    /* Sidebar adjustments for mobile */
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding-top: 10px;
+    }
+
+    /* Adjust main content padding for mobile */
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    /* Flexbox column direction adjustments for emails and reply */
+    .row {
+        flex-direction: column !important;
+    }
+
+    .col-md-4, .col-md-8 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Mobile button adjustments */
+    .btn {
+        width: 100%;
+        padding: 10px 16px;
+    }
+
+    /* Increase font size in headers */
+    .card-header {
+        font-size: 1.2rem;
+    }
+
+    /* Email item adjustments for mobile */
+    .email-item {
+        padding: 12px 16px;
+    }
+
+    /* Card header style for small screens */
+    .card-header {
+        padding: 12px;
+    }
+}
+
+/* ------------------------------------------- */
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+/* Sidebar styling for dark theme */
+body.dark-theme .sidebar {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+/* Sidebar links for dark theme */
+body.dark-theme .nav-link {
+    color: #f4f4f4;
+}
+
+body.dark-theme .nav-link:hover, body.dark-theme .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main content area styling for dark theme */
+body.dark-theme .main-content {
+    background-color: #181818;
+}
+
+/* Card styling for dark theme */
+body.dark-theme .card {
+    background-color: #2d2d2d;
+    color: #f4f4f4;
+}
+
+/* Card header for dark theme */
+body.dark-theme .card-header {
+    background-color: #3c3c3c;
+    color: #f4f4f4;
+}
+
+/* Card body for dark theme */
+body.dark-theme .card-body {
+    background-color: #2d2d2d;
+    color: #f4f4f4;
+}
+
+/* Button styling for dark theme */
+body.dark-theme .btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+body.dark-theme .btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+body.dark-theme .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+body.dark-theme .btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+body.dark-theme .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+body.dark-theme .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Loading spinner adjustments for dark theme */
+body.dark-theme .loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #2563eb;
+}
+
+/* Dark theme for form inputs */
+body.dark-theme .form-control {
+    background-color: #3c3c3c;
+    color: #f4f4f4;
+}
+
+body.dark-theme .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Responsive Design for Dark Theme */
+@media (max-width: 768px) {
+    body.dark-theme .sidebar {
+        background-color: #333;
+    }
+
+    body.dark-theme .main-content {
+        background-color: #181818;
+    }
+}
