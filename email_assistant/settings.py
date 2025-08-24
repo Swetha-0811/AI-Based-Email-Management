@@ -17,10 +17,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # --------------------------------------------------------------------
 SECRET_KEY = config("SECRET_KEY", default="insecure-dev-key")
 DEBUG = config("DEBUG", default=True, cast=bool)
-from decouple import config
 
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="127.0.0.1,localhost").split(",")
-
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="127.0.0.1,localhost,email-assistant-eh8y.onrender.com").split(",")
 
 # --------------------------------------------------------------------
 # APPLICATIONS
@@ -31,13 +29,9 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",
-
-    # Your app
-    "inbox",
-    'django_extensions',
-
-    # Allauth for Google OAuth
+    "django.contrib.staticfiles", 
+    "inbox",  # Your app
+    'django_extensions',  # For additional Django management tools
     "django.contrib.sites",
     "allauth",
     "allauth.account",
@@ -117,14 +111,8 @@ USE_TZ = True
 # STATIC FILES (CSS, JS, Images)
 # --------------------------------------------------------------------
 STATIC_URL = "/static/"
-
-# where collectstatic will put files (for production)
 STATIC_ROOT = BASE_DIR / "staticfiles"
-
-# additional locations for static files in development
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # --------------------------------------------------------------------
 # DEFAULT PRIMARY KEY FIELD TYPE
@@ -169,18 +157,11 @@ if DEBUG and GEMINI_API_KEY:
 elif DEBUG:
     print("⚠️  GEMINI_API_KEY not found in .env")
 
-# settings.py
-
-# Use database-backed session storage
+# --------------------------------------------------------------------
+# SESSIONS (Database-backed)
+# --------------------------------------------------------------------
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
-
-# Session expiration time (in seconds)
 SESSION_COOKIE_AGE = 3600  # 1 hour
-
-# Optionally, expire session on browser close
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-
-# Ensure secure cookies in production (use HTTPS)
 SESSION_COOKIE_SECURE = True
-
 SESSION_SAVE_EVERY_REQUEST = True
