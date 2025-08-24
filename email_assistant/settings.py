@@ -17,8 +17,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # --------------------------------------------------------------------
 SECRET_KEY = config("SECRET_KEY", default="insecure-dev-key")
 DEBUG = config("DEBUG", default=True, cast=bool)
+from decouple import config
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="127.0.0.1,localhost").split(",")
+
 
 # --------------------------------------------------------------------
 # APPLICATIONS
