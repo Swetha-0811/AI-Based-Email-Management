@@ -88,10 +88,16 @@ TEMPLATES = [
 # --------------------------------------------------------------------
 # DATABASE
 # --------------------------------------------------------------------
+
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",  # Use SQLite for local/dev environments (switch to PostgreSQL for production)
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME'),          # From Render (your DB name)
+        'USER': config('DB_USER'),          # From Render (your DB user)
+        'PASSWORD': config('DB_PASSWORD'),  # From Render (your DB password)
+        'HOST': config('DB_HOST', default='localhost'),  # From Render (your DB host)
+        'PORT': config('DB_PORT', default='5432'),       # Default PostgreSQL port
     }
 }
 
