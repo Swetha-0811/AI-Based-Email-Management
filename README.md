@@ -1,4 +1,5 @@
 🚀 Secure AI-Powered Email & Meeting Assistant
+
 An intelligent productivity tool that automates email management, meeting scheduling, and communication insights using AI + voice commands. Built with Django REST Framework, Gmail & Google Calendar APIs, and OAuth 2.0 for secure access.
 
 ⚙️ Key Features
