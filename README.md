@@ -8,6 +8,8 @@ An intelligent productivity tool that automates email management, meeting schedu
 😊 Sentiment Analysis – Detect tone to prioritize important or urgent emails
 🗓️ AI Meeting Scheduler – Syncs with Google Calendar to create or suggest meetings automatically
 🔒 Secure Authentication – Google OAuth 2.0 ensures safe data handling
+
+
 🧰 Tech Stack
 Backend: Django REST Framework
 APIs: Gmail API, Google Calendar API
@@ -15,10 +17,13 @@ AI/NLP: spaCy, Transformers, OpenAI API
 Voice Control: SpeechRecognition, gTTS
 Database: PostgreSQL / MongoDB
 Deployment: Render / Vercel
+
+
 ⚡ Impact
 🔄 1000+ API requests/day with 99.9% uptime
 📉 Reduced manual email handling by 40%
 🤖 Achieved 90% accuracy in thread & sentiment detection
+
 🧠 How It Works
 Authenticate via Google OAuth 2.0
 Use voice or text commands to manage emails or schedule meetings
